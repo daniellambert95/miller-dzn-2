@@ -14,9 +14,6 @@ export const bunnyVideoLoader = (src: string) => {
   // Construct the full URL
   const videoUrl = `${cdnBase}/${videoPath}`;
   
-  // Debug log
-  console.log(`Loading video: ${src} → ${videoUrl}`);
-  
   return videoUrl;
 };
 
