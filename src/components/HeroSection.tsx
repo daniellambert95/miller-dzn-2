@@ -18,8 +18,19 @@ const HeroSection = () => {
       id="hero"
       className="h-[100vh] flex items-center relative overflow-hidden pt-20"
     >
-      {/* Background */}
-      <div className="absolute inset-0 z-0 bg-black"></div>
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 bg-black">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/miller-hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+      </div>
 
       <div className="container-custom z-20 text-white relative w-full">
         <div className="flex flex-col items-center justify-center text-center space-y-6">
