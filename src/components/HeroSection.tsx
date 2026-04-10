@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import localFont from 'next/font/local';
-import bunnyVideoLoader from '@/utils/videoLoader';
 
 const drukWide = localFont({
   src: '../../public/fonts/Druk-Wide-Medium.ttf',
@@ -41,7 +40,7 @@ const HeroSection = () => {
           muted
           playsInline
         >
-          <source src={bunnyVideoLoader("/miller-hero.mp4")} type="video/mp4" />
+          <source src="/miller-hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
