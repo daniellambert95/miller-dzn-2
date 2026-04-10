@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import bunnyImageLoader from '@/utils/imageLoader';
 
@@ -39,15 +38,11 @@ const Header = () => {
         {/* Logo - Far Left */}
         <div className="flex items-center flex-1">
           <Link href="/" className="flex items-center">
-            <Image
-              src="/miller_logos/Miller Design Logo New.svg"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={bunnyImageLoader({ src: "/miller_logos/Miller Design Logo New.svg", width: 150 })}
               alt="Miller Design Logo"
-              width={150}
-              height={50}
-              style={{ width: 150, height: "auto" }}
-              className="brightness-0 invert"
-              priority
-              loader={bunnyImageLoader}
+              className="w-37.5 h-auto brightness-0 invert"
             />
           </Link>
         </div>

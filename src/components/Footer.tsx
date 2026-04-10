@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import bunnyImageLoader from '@/utils/imageLoader';
 
 const Footer = () => {
@@ -45,13 +44,11 @@ const Footer = () => {
           {/* Logo and Info */}
           <div className="md:col-span-1">
             <div className="mb-8">
-              <Image
-                src="/miller_logos/Miller Design Logo white.webp"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={bunnyImageLoader({ src: "/miller_logos/Miller Design Logo white.webp", width: 150 })}
                 alt="Miller Design Logo"
-                width={150}
-                height={50}
-                style={{ width: 150, height: "auto" }}
-                loader={bunnyImageLoader}
+                className="w-37.5 h-auto"
               />
             </div>
             

@@ -17,15 +17,7 @@ export const bunnyImageLoader = ({ src, width, quality }: { src: string; width: 
   const cdnBase = 'https://site-and-site-miller-design-images.b-cdn.net';
   const imagePath = `miller-design-images/${filename}`;
 
-  // Construct the full URL with optimization parameters
-  const imageUrl = `${cdnBase}/${imagePath}?width=${width}&quality=${imageQuality}`;
-
-  // Debug log (remove in production)
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`Loading image: ${src} → ${imageUrl}`);
-  }
-
-  return imageUrl;
+  return `${cdnBase}/${imagePath}?width=${width}&quality=${imageQuality}`;
 };
 
 export default bunnyImageLoader; 
